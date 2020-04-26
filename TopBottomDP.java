@@ -7,12 +7,16 @@ public class TopBottomDP{
 		Arrays.fill(dp,0);
 		System.out.println(fib(n,dp));
 	}
+	//using Recursion
 	public static int fib(int n,int dp[]){
+		//Base Case
 		if(n==0 || n==1){
 			return n;
 		}
+		//Overlapping
 		if(dp[n]!=0)
 			return dp[n];
+		//Recursive Case
 		int ans;
 		ans=fib(n-1,dp)+fib(n-2,dp);
 		return dp[n]=ans;
